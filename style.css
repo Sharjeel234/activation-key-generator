@@ -1,0 +1,141 @@
+:root
+{
+    --color-primary: #7380ec;
+    --color-copy: #41f1b6;
+    --color-key: #ededf0;
+    --color-card: #dce1eb;
+    --background: #ededf0;
+    --title: #000;
+    --white: #fff;
+    --theme: #fff;
+
+}
+.dark-theme
+{
+    --background: #181a1e;
+    --title: #fff;
+    --color-card: #5c6ca4;
+
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+
+.container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--background);
+}
+.title
+{
+    position: absolute;
+    top: 10px;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--title);
+}
+.card
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    background: var(--color-card);
+}
+.btn
+{
+    width: 100px;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 400;
+    transition: all 500ms ease;
+    cursor: pointer;
+}
+.key
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    width: 375px;
+    height: 30px;
+    margin: 30px;
+    background: var(--color-key);
+}
+.btnGen
+{
+    background: var(--color-primary);
+    color: var(--white);
+}
+.btnCopy
+{
+    background: var(--color-copy);
+    color: var(--white);
+}
+.theme-toggler
+{
+    background: var(--theme);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.6rem;
+    width: 3.5rem;
+    cursor: pointer;
+    border-radius: 0.4rem;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+.theme-toggler i
+{
+    font-size: 1.2rem;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.theme-toggler i.active
+{
+    background: var(--color-primary);
+    color: var(--white);
+    border-radius: 0.4rem;
+}
+
+@media (max-width: 600px)
+{
+    .title
+    {
+        font-size: 30px;
+        left: 10px;
+    }
+    .card
+    {
+        width: 400px;
+        height: 250px;
+    }
+    .theme-toggler
+    {
+        width: 2.8rem;
+        height: 1.4rem;
+    }
+    .theme-toggler i 
+    {
+        font-size: 1rem;
+    }
+}
